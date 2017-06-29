@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+#
+# https://kb.novaordis.com/index.php/Bash-wrapper-functions
+#
+#
+
+bash-wrapper-functions-version=1
+
