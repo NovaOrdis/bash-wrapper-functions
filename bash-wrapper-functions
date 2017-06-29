@@ -8,7 +8,7 @@
 #
 #
 
-bash_wrapper_functions_version=1
+bash_wrapper_functions_version=2-SNAPSHOT-1
 
 #
 # Attempts to identify JAVA_HOME and returns the path to the java binary based on that, while verifying the presence
