@@ -1,0 +1,4 @@
+#!/bin/bash
+
+[ -f $(dirname $0)/bash-wrapper-functions ] && .  $(dirname $0)/bash-wrapper-functions || { echo "[error]: $(dirname $0)/bash-wrapper-functions not found, the application was probably not installed correctly" 1>&2; exit 1; }
+
