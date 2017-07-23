@@ -92,21 +92,19 @@ function main() {
         args="${command} ${args}"
     fi
 
-
-
     local java_bin
     java_bin=$(get-java-binary) || exit 1
-
-    debug "java_bin: ${java_bin}"
 
     local classpath
     classpath=$(get-classpath-from-directory $(dirname $0)/../lib true)
 
-    debug "classpath: ${classpath}"
+    ${VERBOSE} && verbose_system_property="-Dverbose=true"
 
+    debug "java_bin: ${java_bin}"
+    debug "classpath: ${classpath}"
     debug "arguments:>${args}<"
 
-    ${java_bin} ${java_debug_args} -cp ${classpath} ${MAIN_CLASS} ${args}
+    ${java_bin} ${java_debug_args} -cp ${classpath} ${verbose_system_property} ${MAIN_CLASS} ${args}
 }
 
 main "$@"
