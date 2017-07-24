@@ -28,10 +28,6 @@ function main() {
 
             VERBOSE=true
 
-        elif [ "${1:0:1}" = "-" ]; then
-
-            error "unknown command line option '$1'"
-
         elif [ "$1" != "${1/ //}" ]; then
 
             #
@@ -50,6 +46,10 @@ function main() {
             command=$1
 
         else
+
+            #
+            # everything else is passed to the java layer
+            #
 
             args="${args} $1"
         fi
