@@ -200,7 +200,7 @@ function main() {
     command="${java_bin} ${java_debug_args} -cp ${classpath} ${verbose_system_property} ${MAIN_CLASS}"
     debug ${command} $@
     ${command} "$@"
-    
+
 }
 
 
